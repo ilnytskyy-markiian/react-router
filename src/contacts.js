@@ -45,6 +45,7 @@ export async function deleteContact(id) {
   if (index > -1) {
     contacts.splice(index, 1);
     await set(contacts);
+    console.log("deleteContact",contacts);
     return true;
   }
   return false;
